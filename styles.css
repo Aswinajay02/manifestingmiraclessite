@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #fb923c, #ec4899, #8b5cf6); /* orange-pink-purple */
+  background: linear-gradient(to bottom right, #fb923c, #ec4899, #8b5cf6);
   display: flex;
   justify-content: center;
   align-items: center;
