@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <meta charset="UTF-8" />
+    <title>Manifesting Miracles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+    <!-- Add this line below Tailwind CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+    <!-- Apply the font globally -->
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  
+   
+  <body class="bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600 text-white min-h-screen">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center py-20 px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Manifesting Miracles</h1>
+      <p class="text-xl md:text-2xl max-w-xl">Empower your mind. Attract abundance. Start your manifestation journey today.</p>
+      <div class="mt-6 space-x-4">
+        <a href="#resources" class="bg-white text-purple-700 font-semibold px-6 py-3 rounded-2xl shadow hover:scale-105 transition">Explore Resources</a>
+        <a href="#auth" class="bg-purple-900 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:scale-105 transition">Login / Signup</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white text-purple-800 py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">Our Mission</h2>
+        <p class="text-lg leading-relaxed">
+          At Manifesting Miracles, we believe in the power of thoughts, words, and intention. 
+          Whether you're new to manifestation or a seasoned creator, our tools, tips, and community 
+          will help you design the life you dream of.
+        </p>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Free Downloads & Workbooks</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white text-purple-800 rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-bold mb-2">Gratitude Workbook</h3>
+            <p class="text-sm mb-4">Start your day with positivity.</p>
+            <a href="#" class="text-pink-600 font-semibold hover:underline">Download</a>
+          </div>
+          <div class="bg-white text-purple-800 rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-bold mb-2">Affirmation Challenge</h3>
+            <p class="text-sm mb-4">21-day self-love challenge.</p>
+            <a href="#" class="text-pink-600 font-semibold hover:underline">Download</a>
+          </div>
+          <div class="bg-white text-purple-800 rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-bold mb-2">Manifestation Planner</h3>
+            <p class="text-sm mb-4">Organize your goals with intention.</p>
+            <a href="#" class="text-pink-600 font-semibold hover:underline">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentication Section -->
+    <section id="auth" class="bg-white text-purple-800 py-16 px-6">
+      <div class="max-w-md mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Join the Community</h2>
+        <p class="mb-6 text-sm">Log in or sign up to access your personal dashboard and save your progress.</p>
+        <div class="space-y-4">
+          <a href="/login.html" class="block bg-purple-600 text-white py-3 rounded-xl font-semibold hover:bg-purple-700">Login</a>
+          <a href="/signup.html" class="block bg-pink-500 text-white py-3 rounded-xl font-semibold hover:bg-pink-600">Sign Up</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-white bg-purple-800">
+      <p>&copy; 2025 Manifesting Miracles. All rights reserved.</p>
+    </footer>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/thankyou.html"; // redirect after login
+            });
+          }
+        });
+      }
+    </script>
+    <button onclick="netlifyIdentity.open()" class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded">
+      Sign In / Sign Up
+    </button>
+    
+  </body>
+</html>
