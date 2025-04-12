@@ -50,7 +50,7 @@
           <div class="bg-white text-purple-800 rounded-2xl shadow-lg p-6">
             <h3 class="text-xl font-bold mb-2">Gratitude Workbook</h3>
             <p class="text-sm mb-4">Start your day with positivity.</p>
-            <a href="downloads/Gratitude_Workbook.pdf" download class="text-pink-600 font-semibold hover:underline">Download</a>
+            <a href="downloads/gratitude-workbook.pdf" download class="text-pink-600 font-semibold hover:underline">Download</a>
           </div>
           <div class="bg-white text-purple-800 rounded-2xl shadow-lg p-6">
             <h3 class="text-xl font-bold mb-2">Affirmation Challenge</h3>
@@ -66,36 +66,41 @@
       </div>
     </section>
 
-    <!-- Authentication Section -->
-    <section id="auth" class="bg-white text-purple-800 py-16 px-6">
-      <div class="max-w-md mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Join the Community</h2>
-        <p class="mb-6 text-sm">Log in or sign up to access your personal dashboard and save your progress.</p>
-        <div class="space-y-4">
-          <a href="/login.html" class="block bg-purple-600 text-white py-3 rounded-xl font-semibold hover:bg-purple-700">Login</a>
-          <a href="/signup.html" class="block bg-pink-500 text-white py-3 rounded-xl font-semibold hover:bg-pink-600">Sign Up</a>
-        </div>
-      </div>
-    </section>
+   <!-- Authentication Section -->
+<section id="auth" class="bg-white text-purple-800 py-16 px-6">
+  <div class="max-w-md mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">Join the Community</h2>
+    <p class="mb-6 text-sm">Log in or sign up to access your personal dashboard and save your progress.</p>
+    <div class="space-y-4">
+      <a href="/login.html" class="block bg-purple-600 text-white py-3 rounded-xl font-semibold hover:bg-purple-700">Login</a>
+      <a href="/signup.html" class="block bg-pink-500 text-white py-3 rounded-xl font-semibold hover:bg-pink-600">Sign Up</a>
+    </div>
+    <div class="mt-6">
+      <button onclick="netlifyIdentity.open()" class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-6 rounded-xl font-semibold">
+        Quick Sign In / Sign Up
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/thankyou.html"; // redirect after login
+        });
+      }
+    });
+  }
+</script>
+
 
     <!-- Footer -->
     <footer class="text-center py-6 text-white bg-purple-800">
       <p>&copy; 2025 Manifesting Miracles. All rights reserved.</p>
     </footer>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/thankyou.html"; // redirect after login
-            });
-          }
-        });
-      }
-    </script>
-    <button onclick="netlifyIdentity.open()" class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded">
-      Sign In / Sign Up
-    </button>
+ 
     
   </body>
 </html>
